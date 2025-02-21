@@ -1,0 +1,2 @@
+```bash
+kubectl get csinode

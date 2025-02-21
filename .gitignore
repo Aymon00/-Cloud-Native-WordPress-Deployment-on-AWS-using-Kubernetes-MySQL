@@ -1,0 +1,5 @@
+*.log
+*.swp
+*.bak
+__pycache__/
+*.out

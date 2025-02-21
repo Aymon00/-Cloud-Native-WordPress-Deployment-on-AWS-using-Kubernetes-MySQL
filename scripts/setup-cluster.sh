@@ -1,6 +1,8 @@
 #!/bin/bash
-sudo kubeadm init
-mkdir -p $HOME/.kube
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
-echo "Cluster setup complete!"
+kubectl create secret generic dolfined-project \
+    --namespace kube-system \
+    --from-literal "key_id=AK************" \
+    --from-literal "access_key=ie**********"
+
+kubectl get csidriver
+kubectl get csinode
